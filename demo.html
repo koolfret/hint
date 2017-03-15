@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script src="over_width_hint.js"></script>
+<style type="text/css">
+td{
+	/*td超出隐藏*/
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}
+th{
+	width:150px;
+}
+.list{width:300px;margin:3px 0 0 0; border:0; overflow:hidden;border-collapse: collapse;}
+.list tr{height:30px; line-height:30px;}
+/*.list tr th{border-bottom:1px solid #DEEFFB; letter-spacing:1px; color:#ccc; padding:0 0 0 5px;}*/
+.list tr th{background:#DEEFFB; padding:0 0 0 10px;border:1px solid #CAD9EA; border-width:0px 0px 1px 0px;text-align:left;}
+.list tr td{ padding:0 0 0 5px;border:1px solid #DEEFFB; border-width:0px 1px 1px 0px;text-align:left;}
+.list thead tr th{cursor:pointer;work-break:keep-all;white-space:nowrap;}
+.list tbody tr td{cursor:pointer;work-break:keep-all;white-space:nowrap;}
+.list tr td input[type="checkbox"]{margin-left:5px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	setOverWidthHint("td",25);
+});
+</script>
+</head>
+<body>
+<table id="tb_manufacturer" class="list" style="table-layout:fixed;overflow:hidden"
+						cellpadding="0" cellspacing="0">
+						<thead>
+							<tr>
+								<th style="width:30px;"><input value="0" id="checkAll" type="checkbox">
+								</th>
+								
+								<th>文章</th>
+								
+								<th>创建日期</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+							
+								<tr >
+									<td>
+										<input name="keyId" value="21" type="checkbox">
+									</td>
+									<td >spring mvc的两个上下文</td>
+									<td  >2017-03-08 18:01:32</td>
+									<td ></td>														
+								</tr>
+								<tr >
+									<td>
+										<input name="keyId" value="21" type="checkbox">
+									</td>
+									<td >mybatis批量更新</td>
+									<td  >2017-03-08 18:01:32</td>
+									<td ></td>														
+								</tr>
+								<tr >
+									<td>
+										<input name="keyId" value="21" type="checkbox">
+									</td>
+									<td >hibernate自增主键的并发问题</td>
+									<td  >2017-03-08 18:01:32</td>
+									<td ></td>														
+								</tr>
+								<tr >
+									<td>
+										<input name="keyId" value="21" type="checkbox">
+									</td>
+									<td >权限系统设计</td>
+									<td  >2017-03-08 18:01:32</td>
+									<td ></td>														
+								</tr>
+							
+							
+								
+							
+						</tbody>
+					</table>
+<body>
+</html>
