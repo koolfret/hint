@@ -1,0 +1,36 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			setHint("#readAbility",20,"学生答题时间低于120秒的数据，不计入成绩统计中");
+		});
+
+		function setHint(targ,height,html){
+			$(document).ready(function(){	
+				if($("#ow_hint_parent").length==0){
+					$("body").prepend("<div style=\"position:relative;display:none;\" id=\"ow_hint_parent\"><span id=\"ow_hint_info\" style=\"position: absolute;background-color: #f0c53a;padding:5px;border-radius: 2px;z-index:999999;\"></span></div>");
+				}
+				var jObj=$(targ);
+
+				jObj.mouseenter(function(curObj){
+					
+					var x=$(curObj.target).offset().top;
+					var y=$(curObj.target).offset().left;
+					var owHintInfo=$("#ow_hint_info");
+					owHintInfo.css("top",x+height);
+					owHintInfo.css("left",y);					
+					owHintInfo.html(html);
+					$("#ow_hint_parent").show();
+				});
+				jObj.mouseleave(function(curObj){
+					$("#ow_hint_parent").hide();
+				});
+			});
+		}
+	</script>	
+</head>
+<body>
+<input type="button" onclick="" value="阅读能力分析" id="readAbility"/>
+</body>
+</html>
